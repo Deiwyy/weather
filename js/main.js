@@ -5,14 +5,26 @@ const button = document.querySelector('.show-weather-button');
 const countryInput = document.querySelector('.country-input');
 
 
+function update() {
+    
+}
+
+
+
+
 
 function successCallback(data) {
-    console.log(data)
+    const curr = data.current;
+    const feelsLikeC = curr.feelslike_c;
+    const gustKmh = curr.gust_kph;
+    const precipMM = curr.precip_mm;
+    const tempC = curr.temp_c;
+    const city = data.location.name;
 }
 
 
 function failureCallback(err) {
-    alert(err)
+    alert(err);
 }
 
 
@@ -23,7 +35,7 @@ button.addEventListener('click', () => {
             response.json().then(
             successCallback,
             failureCallback
-            )
+            );
         }, 
         failureCallback
     );
