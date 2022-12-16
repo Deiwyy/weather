@@ -42,8 +42,9 @@ hr {
 .description {
     color: white;
     padding-top: 20px;
-    font-size: 20px;
+    font-size: 25px;
 }
+
 
 .country-picker {
     position: fixed;
